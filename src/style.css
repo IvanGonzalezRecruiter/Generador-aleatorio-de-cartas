@@ -1,1 +1,81 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&display=swap");
+
+* {
+  font-size: 10px;
+}
+
+body {
+  background: darkgreen;
+}
+
+.card-container {
+  height: 100vh;
+}
+
+.card {
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */ 0 -1px 1px rgba(0, 0, 0, 0.15),
+    /* The second layer */ 0 -10px 0 -5px #eee,
+    /* The second layer shadow */ 0 -10px 1px -4px rgba(0, 0, 0, 0.15),
+    /* The third layer */ 0 -20px 0 -10px #eee,
+    /* The third layer shadow */ 0 -20px 1px -9px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  height: 350px;
+}
+
+/* affects suit placement */
+.card::after,
+.card::before {
+  position: absolute;
+  font-size: 3rem;
+}
+
+/* suit placement top */
+.card::after {
+  top: 0;
+  left: 0;
+}
+
+/* suit placement bottom */
+.card::before {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.heart::after,
+.heart::before {
+  content: "\2665";
+}
+
+.spade::after,
+.spade::before {
+  content: "\2660";
+}
+
+.club::after,
+.club::before {
+  content: "\2663";
+}
+
+.diamond::after,
+.diamond::before {
+  content: "\2666";
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+
+.spade,
+.club {
+  color: black;
+}
+
+h1 {
+  font-size: 8rem;
+  font-family: "Frank Ruhl Libre", serif;
+}
